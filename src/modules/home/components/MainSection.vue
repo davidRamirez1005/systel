@@ -80,8 +80,8 @@
                 <h3
                   class="mt-2 mb-3 text-1xl font-bold leading-tight sm:text-2xl sm:leading-tight md:text-[25px] md:leading-tight text-white"
                 >
-                  Nos encontramos en la cuidad de Bucaramanga, y ocupa un lugar privilegiado en
-                  servicios y soluciones en el area de Networking, servidores, almacenamiento,
+                  Nos encontramos en la ciudad de Bucaramanga, y ocupamos un lugar privilegiado en
+                  servicios y soluciones en el área de Networking, servidores, almacenamiento,
                   infraestructura para datacenter, seguridad informática y consultorías.
                 </h3>
               </div>
