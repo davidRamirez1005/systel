@@ -25,6 +25,13 @@
 
         <div class="grid md:grid-cols-2 rounded gap-8">
           <el-card class="service-card" shadow="hover">
+            <div class="card-image-wrapper">
+              <img
+                src="@/assets/img/imagen pagina inicio .jpg"
+                alt="Misión"
+                class="card-image img-mision"
+              />
+            </div>
             <div class="text-center">
               <div class="icon-container mb-4">
                 <el-icon :size="48" color="#409EFF">
@@ -42,6 +49,9 @@
           </el-card>
 
           <el-card class="service-card" shadow="hover">
+            <div class="card-image-wrapper">
+              <img src="@/assets/img/pag 3 vision y mision.png" alt="Visión" class="card-image" />
+            </div>
             <div class="text-center">
               <div class="icon-container mb-4">
                 <el-icon :size="48" color="#E6A23C">
@@ -312,11 +322,50 @@ const scrollToContact = () => {
   padding: 2rem 0;
 }
 
+.hero-image-container {
+  max-width: 700px;
+  margin: 0 auto;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+.hero-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.hero-image:hover {
+  transform: scale(1.02);
+}
+
 .hero-title {
   font-size: 3rem;
   font-weight: bold;
   line-height: 1.2;
   color: var(--app-text-primary);
+}
+
+.card-image-wrapper {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+}
+
+.card-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.img-mision {
+  transform: scale(1.3);
+  object-position: center;
 }
 
 .service-card {
@@ -326,6 +375,14 @@ const scrollToContact = () => {
 
 .service-card:hover {
   transform: translateY(-8px);
+}
+
+.service-card:hover .card-image {
+  transform: scale(1.1);
+}
+
+.service-card:hover .img-mision {
+  transform: scale(1.4);
 }
 
 .dark .services-section {
@@ -379,6 +436,14 @@ const scrollToContact = () => {
   .hero-section-main p {
     font-size: 1.125rem;
   }
+
+  .hero-image-container {
+    margin-bottom: 2rem;
+  }
+
+  .card-image-wrapper {
+    height: 180px;
+  }
 }
 
 @media (max-width: 640px) {
@@ -393,6 +458,14 @@ const scrollToContact = () => {
 
   .hero-section-main p {
     font-size: 1rem;
+  }
+
+  .hero-image-container {
+    margin-bottom: 2rem;
+  }
+
+  .card-image-wrapper {
+    height: 150px;
   }
 
   .section-padding {

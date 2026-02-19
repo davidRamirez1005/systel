@@ -2,6 +2,13 @@
   <div>
     <section id="software" class="software-section">
       <div class="max-w-7xl mx-auto">
+        <div class="software-image-wrapper">
+          <img
+            src="@/assets/img/pag 9 sofware.png"
+            alt="Software y Desarrollo"
+            class="software-image"
+          />
+        </div>
         <div class="text-center mb-16">
           <h2 class="text-4xl font-bold mb-4">Software</h2>
         </div>
@@ -166,6 +173,20 @@
   position: relative;
 }
 
+.software-image-wrapper {
+  max-width: 15%;
+  margin: 2rem auto;
+  border-radius: 90px;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+
+.software-image {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
 /* Software List Styles */
 .software-list-container {
   max-width: 900px;
@@ -309,7 +330,12 @@
 /* Responsive */
 @media (max-width: 768px) {
   .software-section {
-    padding: 2.5rem 1rem;
+    margin-top: -2rem !important;
+    padding: 1rem;
+  }
+
+  .software-image-wrapper {
+    max-width: 40%;
   }
 
   .software-section .text-center {
@@ -363,10 +389,6 @@
 
   .list-content {
     font-size: 0.9rem;
-  }
-
-  .carousel-row-2 {
-    display: none;
   }
 
   .carousel-track {

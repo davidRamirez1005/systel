@@ -76,6 +76,9 @@
 
     <section class="cta-section">
       <div class="cta-content">
+        <div class="card-image-wrapper" style="width: 40%; margin: 0 auto">
+          <img src="@/assets/img/pag 8 servicios.png" alt="Misión" class="card-image" />
+        </div>
         <h2>¿Necesita mejorar su conectividad?</h2>
         <p>
           Contáctenos para una evaluación personalizada de sus necesidades de redes y comunicaciones
@@ -224,6 +227,12 @@ html.dark .hero-overlay {
 }
 
 @media (max-width: 768px) {
+  .hero-section {
+    background-attachment: scroll;
+    background-size: cover;
+    background-position: center center;
+  }
+
   .hero-content h1 {
     font-size: 2rem;
   }
@@ -246,6 +255,10 @@ html.dark .hero-overlay {
 }
 
 @media (max-width: 480px) {
+  .hero-section {
+    min-height: 50vh;
+  }
+
   .hero-content h1 {
     font-size: 1.75rem;
   }

@@ -98,6 +98,13 @@
 import { ref, reactive } from "vue"
 import { ElMessage } from "element-plus"
 import { User, Phone, Message, ChatLineRound } from "@element-plus/icons-vue"
+import emailjs from "@emailjs/browser"
+
+const EMAILJS_CONFIG = {
+  serviceId: "service_2e89ifr",
+  templateId: "template_vy2agmk",
+  publicKey: "SoFxK5GOzrdO_KOdt",
+}
 
 const dialogVisible = ref(false)
 const loading = ref(false)
@@ -128,19 +135,52 @@ const rules = {
 const handleSubmit = async () => {
   if (!contactFormRef.value) return
 
-  await contactFormRef.value.validate((valid) => {
+  await contactFormRef.value.validate(async (valid) => {
     if (valid) {
       loading.value = true
 
-      enviarWhatsApp()
-      setTimeout(() => {
-        ElMessage.success("¡Mensaje enviado correctamente!")
+      try {
+        await enviarEmail()
+
+        // enviarWhatsApp()
+
+        setTimeout(() => {
+          ElMessage.success("¡Mensaje enviado correctamente!")
+          loading.value = false
+          dialogVisible.value = false
+          resetForm()
+        }, 1500)
+      } catch (error) {
+        console.error("Error al enviar el mensaje:", error)
+        ElMessage.error("Error al enviar el mensaje. Por favor, intenta nuevamente.")
         loading.value = false
-        dialogVisible.value = false
-        resetForm()
-      }, 1500)
+      }
     }
   })
+}
+
+const enviarEmail = async () => {
+  try {
+    const message = `Mensaje desde el sitio web:\n\n${contactForm.message}\n\nEnviado por: ${contactForm.name}`
+    const templateParams = {
+      to_email: EMAILJS_CONFIG.toEmail,
+      from_name: contactForm.name,
+      message: message,
+      reply_to: EMAILJS_CONFIG.toEmail,
+    }
+
+    const response = await emailjs.send(
+      EMAILJS_CONFIG.serviceId,
+      EMAILJS_CONFIG.templateId,
+      templateParams,
+      EMAILJS_CONFIG.publicKey
+    )
+
+    return response
+  } catch (error) {
+    console.error("Error al enviar el email:", error)
+    throw error
+  }
 }
 
 const enviarWhatsApp = () => {
