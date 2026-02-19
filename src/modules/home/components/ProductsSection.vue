@@ -3,7 +3,7 @@
     <section id="productos" class="products-section">
       <div class="max-w-6xl mx-auto px-6 py-20 products-padding">
         <div class="text-center mb-16 products-header">
-          <h3 class="text-4xl font-bold mb-4">Productos/Servicios</h3>
+          <h2 class="text-4xl font-bold mb-4">Productos/Servicios</h2>
           <p class="text-lg text-gray-600 dark:text-gray-400">Tecnología y telecomunicaciones</p>
         </div>
 
@@ -16,8 +16,14 @@
                   <Lock />
                 </el-icon>
               </div>
-              <h4 class="product-title">Seguridad Informática</h4>
+              <h3 class="product-title">Seguridad Informática</h3>
               <p class="product-description">Protección integral de sistemas y datos</p>
+              <div class="product-action">
+                <span class="product-link">Ver más</span>
+                <el-icon class="arrow-icon">
+                  <ArrowRight />
+                </el-icon>
+              </div>
             </div>
           </div>
 
@@ -29,8 +35,14 @@
                   <Monitor />
                 </el-icon>
               </div>
-              <h4 class="product-title">Infraestructura de TI</h4>
+              <h3 class="product-title">Infraestructura de TI</h3>
               <p class="product-description">Diseño e implementación de redes</p>
+              <div class="product-action">
+                <span class="product-link">Ver más</span>
+                <el-icon class="arrow-icon">
+                  <ArrowRight />
+                </el-icon>
+              </div>
             </div>
           </div>
 
@@ -42,8 +54,14 @@
                   <Connection />
                 </el-icon>
               </div>
-              <h4 class="product-title">Networking</h4>
+              <h3 class="product-title">Networking</h3>
               <p class="product-description">Soluciones de conectividad y redes</p>
+              <div class="product-action">
+                <span class="product-link">Ver más</span>
+                <el-icon class="arrow-icon">
+                  <ArrowRight />
+                </el-icon>
+              </div>
             </div>
           </div>
 
@@ -55,8 +73,14 @@
                   <Key />
                 </el-icon>
               </div>
-              <h4 class="product-title">Control de Acceso</h4>
+              <h3 class="product-title">Control de Acceso</h3>
               <p class="product-description">Sistemas de seguridad física</p>
+              <div class="product-action">
+                <span class="product-link">Ver más</span>
+                <el-icon class="arrow-icon">
+                  <ArrowRight />
+                </el-icon>
+              </div>
             </div>
           </div>
         </div>
@@ -73,7 +97,7 @@
                 <DocumentChecked />
               </el-icon>
             </div>
-            <h4 class="service-item-title">Consultorías</h4>
+            <h3 class="service-item-title">Consultorías</h3>
             <p class="service-item-description">
               Asesoría experta en tecnología y transformación digital
             </p>
@@ -92,7 +116,7 @@
                 <Reading />
               </el-icon>
             </div>
-            <h4 class="service-item-title">Capacitaciones</h4>
+            <h3 class="service-item-title">Capacitaciones</h3>
             <p class="service-item-description">
               Formación técnica personalizada para su equipo de trabajo
             </p>
@@ -111,7 +135,7 @@
                 <Tools />
               </el-icon>
             </div>
-            <h4 class="service-item-title">Soporte Técnico</h4>
+            <h3 class="service-item-title">Soporte Técnico</h3>
             <p class="service-item-description">
               Asistencia técnica profesional cuando más lo necesita
             </p>
@@ -402,10 +426,34 @@ const handleContact = () => {
   font-size: 0.875rem;
   color: var(--app-text-secondary);
   line-height: 1.5;
+  margin-bottom: 1rem;
 }
 
 .dark .product-description {
   color: #94a3b8;
+}
+
+.product-action {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #409eff;
+  font-weight: 600;
+  margin-top: auto;
+  padding-top: 0.5rem;
+  transition: gap 0.3s ease;
+}
+
+.product-card:hover .product-action {
+  gap: 0.75rem;
+}
+
+.product-link {
+  font-size: 0.9rem;
+}
+
+.product-card:hover .arrow-icon {
+  transform: translateX(4px);
 }
 
 /* Responsive adjustments */
@@ -633,10 +681,6 @@ const handleContact = () => {
 
   .service-item-description {
     font-size: 0.9rem;
-  }
-
-  .modal-subtitle {
-    font-size: 1.25rem;
   }
 }
 

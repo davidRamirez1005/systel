@@ -102,11 +102,6 @@ import {
 </script>
 
 <style scoped>
-.networking-page {
-  width: 100%;
-  background-color: var(--app-bg-primary);
-}
-
 /* Hero Section with Background Image */
 .hero-section {
   position: relative;
@@ -114,10 +109,15 @@ import {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-image: url("https://images.unsplash.com/photo-1544197150-b99a580bb7a8?q=80&w=2070");
+  background-image: url("https://images.unsplash.com/photo-1504384308090-c894fdcc538d?q=80&w=2070");
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
+}
+
+.networking-page {
+  width: 100%;
+  background-color: var(--app-bg-primary);
 }
 
 .hero-overlay {

@@ -290,10 +290,6 @@ const resetForm = () => {
     padding: 60px 16px;
   }
 
-  .section-title {
-    font-size: 2rem;
-  }
-
   .contact-info {
     grid-template-columns: 1fr;
   }
@@ -322,10 +318,6 @@ const resetForm = () => {
 }
 
 @media (max-width: 640px) {
-  .section-title {
-    font-size: 1.75rem;
-  }
-
   .info-item {
     padding: 20px;
   }

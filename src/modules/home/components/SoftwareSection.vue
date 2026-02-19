@@ -3,7 +3,7 @@
     <section id="software" class="software-section">
       <div class="max-w-7xl mx-auto">
         <div class="text-center mb-16">
-          <h3 class="text-4xl font-bold mb-4">Software</h3>
+          <h2 class="text-4xl font-bold mb-4">Software</h2>
         </div>
 
         <div class="software-list-container">
@@ -370,7 +370,7 @@
   }
 
   .carousel-track {
-    animation-duration: 30s;
+    animation-duration: 20s;
   }
 
   .logo-item {

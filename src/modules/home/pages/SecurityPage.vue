@@ -335,8 +335,16 @@ html.dark .hero-overlay {
 }
 
 @media (max-width: 480px) {
+  .hero-content {
+    padding: 2rem 1rem;
+  }
+
   .hero-content h1 {
     font-size: 1.75rem;
+  }
+
+  .hero-description {
+    font-size: 0.95rem;
   }
 
   .services-section {

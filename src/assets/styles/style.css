@@ -181,6 +181,14 @@ body,
   margin: 0;
 }
 
+h2 {
+  font-size: 2.2rem !important;
+}
+
+h3 {
+  font-size: 1.3rem !important;
+}
+
 /* Responsive Collapse */
 @media (max-width: 768px) {
   .custom-collapse .el-collapse-item__header {
@@ -199,6 +207,19 @@ body,
   .content-paragraph {
     font-size: 0.95rem;
   }
+
+  h2 {
+    font-size: 1.8rem !important;
+  }
+
+  h3 {
+    font-size: 1.2rem !important;
+  }
+
+  .hero-section {
+    background-attachment: scroll;
+    min-height: 50vh !important;
+  }
 }
 
 @media (max-width: 640px) {
@@ -212,5 +233,17 @@ body,
 
   .collapse-title-wrapper {
     gap: 0.75rem;
+  }
+
+  h2 {
+    font-size: 1.7rem !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-section {
+    min-height: 40vh !important;
+    background-attachment: scroll;
+    background-position: center center;
   }
 }

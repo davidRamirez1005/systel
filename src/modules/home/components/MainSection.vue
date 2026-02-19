@@ -1,6 +1,6 @@
 <template>
   <div>
-    <section class="hero-section">
+    <section class="hero-section-main">
       <div class="max-w-6xl mx-auto text-center px-8">
         <h1 class="hero-title mb-6">
           Soluciones en Tecnología y Telecomunicaciones.
@@ -20,7 +20,7 @@
     <section id="perfil" class="services-section dark:bg-gray-100">
       <div class="max-w-6xl mx-auto px-6 py-20 section-padding">
         <div class="text-center mb-16 section-header">
-          <h3 class="text-4xl font-bold mb-4 perfil">Perfil empresarial</h3>
+          <h2 class="text-4xl font-bold mb-4 perfil">Perfil empresarial</h2>
         </div>
 
         <div class="grid md:grid-cols-2 rounded gap-8">
@@ -304,7 +304,7 @@ const scrollToContact = () => {
   width: 100%;
 }
 
-.hero-section {
+.hero-section-main {
   min-height: 45vh;
   display: flex;
   align-items: center;
@@ -376,7 +376,7 @@ const scrollToContact = () => {
     font-size: 2rem;
   }
 
-  .hero-section p {
+  .hero-section-main p {
     font-size: 1.125rem;
   }
 }
@@ -386,12 +386,12 @@ const scrollToContact = () => {
     font-size: 1.75rem;
   }
 
-  .hero-section {
+  .hero-section-main {
     min-height: 40vh;
     padding: 1.5rem 0;
   }
 
-  .hero-section p {
+  .hero-section-main p {
     font-size: 1rem;
   }
 
@@ -410,7 +410,7 @@ const scrollToContact = () => {
     font-size: 1.5rem;
   }
 
-  .hero-section {
+  .hero-section-main {
     min-height: 35vh;
   }
 }

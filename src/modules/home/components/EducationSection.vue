@@ -3,7 +3,7 @@
     <section id="educacion" class="education-section">
       <div class="px-6 py-20 education-padding">
         <div class="text-center mb-16 education-header">
-          <h3 class="section-title">Sector Educativo</h3>
+          <h2 class="section-title">Sector Educativo</h2>
         </div>
 
         <div class="collapse-container">
