@@ -1,0 +1,216 @@
+@import "tailwindcss";
+
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+:root {
+  --app-bg-primary: #ffffff;
+  --app-bg-secondary: #f9fafb;
+  --app-text-primary: #1f2937;
+  --app-text-secondary: #6b7280;
+  --app-bg-third: #e4ebf1;
+  --active-text-color: #3b82f6;
+  --text-color: #bfcbd9;
+  --background-color-sidebar: #304156;
+}
+
+html.dark {
+  --app-bg-primary: #1a2029;
+  --app-bg-secondary: #222832;
+  --app-text-primary: #ffffff;
+  --app-text-secondary: #a8a8a8;
+  --app-bg-third: #222832ce;
+
+  --el-bg-color: #1a2029;
+  --el-bg-color-overlay: #1a2029;
+  --el-text-color-primary: #f1f5f9;
+  --el-text-color-regular: #cbd5e1;
+  --el-border-color: #334155;
+  --el-box-shadow-light: 0 2px 12px 0 rgba(0, 0, 0, 0.5);
+}
+
+html {
+  transition: background-color 0.2s ease-in-out;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background-color: var(--app-bg-primary);
+  color: var(--app-text-primary) !important;
+}
+
+body,
+.el-card,
+.el-table,
+.el-button,
+.el-input,
+.el-select,
+.el-menu,
+.el-aside,
+.el-header,
+.el-main,
+.el-dialog,
+.el-drawer,
+.el-dropdown,
+.el-tag,
+.el-pagination {
+  transition:
+    background-color 0.3s ease-in-out,
+    border-color 0.3s ease-in-out,
+    color 0.3s ease-in-out;
+}
+
+.el-card {
+  box-shadow: var(--el-box-shadow-light);
+}
+
+.el-table {
+  border-radius: 10px;
+}
+.page-header {
+  margin-bottom: 24px;
+}
+
+.page-header h1 {
+  font-size: 28px;
+  font-weight: 600;
+  color: var(--el-text-color-primary);
+  margin: 0 0 8px 0;
+}
+
+.page-description {
+  font-size: 14px;
+  color: var(--el-text-color-secondary);
+  margin: 0;
+}
+
+.expand-content {
+  padding: 20px;
+  background-color: var(--el-fill-color-light);
+}
+
+/* Custom Collapse Styles - Global */
+.custom-collapse {
+  border: none;
+}
+
+.custom-collapse .el-collapse-item {
+  margin-bottom: 1.25rem;
+  background: var(--app-bg-secondary);
+  border: 1px solid var(--el-border-color);
+  border-radius: 12px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.custom-collapse .el-collapse-item:hover {
+  box-shadow: var(--el-box-shadow-light);
+  border-color: #409eff;
+}
+
+.custom-collapse .el-collapse-item__header {
+  background: var(--app-bg-secondary);
+  border: none;
+  padding: 1.5rem 1.75rem;
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: var(--app-text-primary);
+  height: auto;
+  line-height: 1.5;
+  transition: all 0.3s ease;
+}
+
+.custom-collapse .el-collapse-item__header:hover {
+  background: var(--app-bg-third);
+}
+
+.custom-collapse .el-collapse-item__arrow {
+  color: #409eff;
+  font-size: 16px;
+  font-weight: bold;
+  transition: transform 0.3s ease;
+}
+
+.custom-collapse .el-collapse-item__wrap {
+  background: var(--app-bg-primary);
+  border: none;
+}
+
+.custom-collapse .el-collapse-item__content {
+  padding: 1.75rem;
+  color: var(--app-text-primary);
+  background: var(--app-bg-primary);
+  border-top: 1px solid var(--el-border-color);
+}
+
+.collapse-title-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+}
+
+.collapse-icon {
+  flex-shrink: 0;
+}
+
+.collapse-title-text {
+  font-size: 1.25rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.collapse-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.content-paragraph {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: var(--app-text-primary);
+  margin: 0;
+}
+
+/* Responsive Collapse */
+@media (max-width: 768px) {
+  .custom-collapse .el-collapse-item__header {
+    padding: 1.25rem 1.25rem;
+    font-size: 1rem;
+  }
+
+  .custom-collapse .el-collapse-item__content {
+    padding: 1.25rem;
+  }
+
+  .collapse-title-text {
+    font-size: 1.125rem;
+  }
+
+  .content-paragraph {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .custom-collapse .el-collapse-item__header {
+    padding: 1rem 1rem;
+  }
+
+  .custom-collapse .el-collapse-item__content {
+    padding: 1rem;
+  }
+
+  .collapse-title-wrapper {
+    gap: 0.75rem;
+  }
+}
