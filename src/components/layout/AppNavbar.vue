@@ -414,8 +414,8 @@ const handleCommand = (command) => {
 <style scoped>
 .navbar {
   background-color: var(--el-bg-color);
-  border-bottom: 1px solid var(--el-border-color);
-  box-shadow: var(--el-box-shadow-light);
+  /* border-bottom: 1px solid var(--el-border-color); */
+  /* box-shadow: var(--el-box-shadow-light); */
   z-index: 1000;
   transition: all 0.3s;
 }
