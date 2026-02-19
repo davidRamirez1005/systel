@@ -7,12 +7,12 @@ const routes = [
     component: () => import("@/modules/home/pages/HomePage.vue"),
     meta: { layout: "landing" },
   },
-  {
-    path: "/:pathMatch(.*)*",
-    name: "NotFound",
-    component: () => import("@/modules/auth/pages/NotFoundPage.vue"),
-    meta: { layout: "empty" },
-  },
+  // {
+  //   path: "/:pathMatch(.*)*",
+  //   name: "NotFound",
+  //   component: () => import("@/modules/auth/pages/NotFoundPage.vue"),
+  //   meta: { layout: "empty" },
+  // },
 ]
 
 if (features.modules.landing) {
