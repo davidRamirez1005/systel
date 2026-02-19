@@ -48,6 +48,9 @@
               <a href="mailto:hector.gil@systelinformaticos.com.co">
                 hector.gil@systelinformaticos.com.co
               </a>
+              <a href="mailto:coordinador.comercial@systelinformaticos.com.co">
+                coordinador.comercial@systelinformaticos.com.co
+              </a>
             </div>
           </div>
         </div>
@@ -248,6 +251,9 @@ const resetForm = () => {
   transition: opacity 0.3s ease;
   display: block;
   margin: 4px 0;
+  word-break: break-word;
+  overflow-wrap: break-word;
+  hyphens: auto;
 }
 
 .info-text a:hover {
@@ -320,6 +326,14 @@ const resetForm = () => {
 @media (max-width: 640px) {
   .info-item {
     padding: 20px;
+  }
+
+  .info-text a {
+    font-size: 0.875rem;
+  }
+
+  .info-text p {
+    font-size: 0.875rem;
   }
 
   :deep(.contact-dialog .el-form-item__label) {
