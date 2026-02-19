@@ -74,6 +74,29 @@
           />
         </el-form-item>
 
+        <el-form-item label="Email" prop="email">
+          <el-input
+            v-model="contactForm.email"
+            placeholder="Ingresa tu email"
+            :prefix-icon="Message"
+          />
+        </el-form-item>
+
+        <el-form-item label="Teléfono" prop="phone">
+          <el-input
+            v-model="contactForm.phone"
+            placeholder="Ingresa tu número de teléfono"
+            :prefix-icon="Phone"
+          />
+        </el-form-item>
+
+        <el-form-item label="Empresa" prop="company">
+          <el-input
+            v-model="contactForm.company"
+            placeholder="Ingresa el nombre de tu empresa"
+          />
+        </el-form-item>
+
         <el-form-item label="Mensaje" prop="message">
           <el-input
             v-model="contactForm.message"
@@ -113,6 +136,9 @@ const contactFormRef = ref(null)
 const contactForm = reactive({
   name: "",
   message: "",
+  email: "",
+  phone: "",
+  company: "",
 })
 
 const rules = {
@@ -127,6 +153,27 @@ const rules = {
     {
       required: true,
       message: "Por favor ingresa un mensaje",
+      trigger: "blur",
+    },
+  ],
+  email: [
+    {
+      required: true,
+      type: "email",
+      message: "Por favor ingresa un email válido",
+      trigger: "blur",
+    },
+  ],
+  phone: [
+    {
+      pattern: /^[0-9\s\-()+]+$/,
+      message: "Por favor ingresa un número de teléfono válido",
+      trigger: "blur",
+    },
+  ],
+  company: [
+    {
+      message: "Por favor ingresa el nombre de la empresa",
       trigger: "blur",
     },
   ],
@@ -161,8 +208,9 @@ const handleSubmit = async () => {
 
 const enviarEmail = async () => {
   try {
-    const message = `Mensaje desde el sitio web:\n\n${contactForm.message}\n\nEnviado por: ${contactForm.name}`
+    const message = `Mensaje desde el sitio web:\n\n${contactForm.message}\n\nEnviado por: ${contactForm.name}\nEmail: ${contactForm.email}\nTeléfono: ${contactForm.phone}\nEmpresa: ${contactForm.company}`
     const templateParams = {
+      title: contactForm.email,
       to_email: EMAILJS_CONFIG.toEmail,
       from_name: contactForm.name,
       message: message,
